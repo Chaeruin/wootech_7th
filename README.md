@@ -10,6 +10,9 @@
 17:27 Problem 5 끝 (10분 소요)
 17:44 Problem 6 validate 제외 끝 (17분 소요)
 
+18:12 3시간 돌파
+18:24 Problem 7 중단, (3시간 12분 경과)
+
 
 
 ## 🚀 기능 요구 사항
@@ -74,7 +77,7 @@
     - [ ] 아이디 길이 제한 / user 길이 제한
     - [ ] 사용자 아이디 알파멧 소문자 제한
     - [ ] 기타 시간 남으면 엄밀히 하기
-  - [ ] 양방향 맵 사용해서 (key-value) user-friend 쌍 구현
+  - [X] 양방향 맵 사용해서 (key-value) user-friend 쌍 구현
   - [ ] key가 user인 맵에 대해 friend +10
   - [ ] visitor에 대해 +1
   - [ ] 위 두개도 맵에 저장(key - id / value - 점수)
