@@ -18,24 +18,23 @@ public class Problem6 {
         Set<String> duplicateEmail = new HashSet<>();
         for (int i = 0; i < forms.size(); i++) {
             for (int j = i+1; j < forms.size(); j++) {
-                String nickName_one = forms.get(i).get(1);
-                String nickName_two = forms.get(j).get(1);
-                if (isContainNickName(nickName_one, nickName_two) || isContainNickName(nickName_two, nickName_one)) {
-                    duplicateEmail.add(forms.get(i).get(0));
-                    duplicateEmail.add(forms.get(j).get(0));
-                }
+                checkAndPutNickName(i, j , forms, duplicateEmail);
             }
         }
         return new ArrayList<>(duplicateEmail);
     }
 
+    static void checkAndPutNickName(int i , int j, List<List<String>> forms, Set<String> duplicateEmail) {
+        if (isContainNickName(forms.get(i).get(1), forms.get(j).get(1)) || isContainNickName(forms.get(j).get(1), forms.get(i).get(1))) {
+            duplicateEmail.add(forms.get(i).get(0));
+            duplicateEmail.add(forms.get(j).get(0));
+        }
+    }
+
     static boolean isContainNickName(String nameOne, String nameTwo) {
-        List<String> matchNames = new LinkedList<>();
         for (int i = 0; i < nameOne.length() - 1; i++) {
             for (int j = i + 2; j < nameOne.length(); j++) {
-                if (nameTwo.contains(nameOne.substring(i , j))) {
-                    return true;
-                }
+                if (nameTwo.contains(nameOne.substring(i , j))) { return true; }
             }
         }
         return false;

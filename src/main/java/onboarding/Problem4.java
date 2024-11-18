@@ -46,7 +46,6 @@ public class Problem4 {
                 wordCharAt[i] = lowerCase.get(wordCharAt[i]);
             }
         }
-
         return String.join("", wordCharAt);
     }
 }

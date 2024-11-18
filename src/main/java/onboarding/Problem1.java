@@ -63,12 +63,4 @@ class Problem1 {
         }
         return false;
     }
-
-    // 안씀
-    static void printResult(List<Integer> pobi, List<Integer> crong, int result) {
-        System.out.println("| pobi | crong | result |\n"
-                + "| --- | --- | --- |");
-        System.out.println("| " +  pobi + " | " + crong + " | " + result + " |");
-
-    }
 }

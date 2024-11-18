@@ -17,6 +17,9 @@
 19:57 Problem 7 validate 제외 테케 만족 (27분 소요/총 67분 소요) <br>
 <br><br>
 
+### - [X] 리팩토링 및 회고 정리 완료
+### - [ ] validate 포함 구현 완료
+
 #### 총 3시간 27분 소요 (회고 작성 제외), 27분 over
 <br>
 
@@ -64,7 +67,6 @@
 
 6. [문제 6](./docs/PROBLEM6.md)
  - 기능 구현
-  - [X] 입력 포맷
   - [ ] validate
     - [ ] 크루 명수 제한
     - [ ] 이메일 포맷 제한
@@ -77,12 +79,12 @@
 
 7. [문제 7](./docs/PROBLEM7.md)
  - 기능 구현
-  - [ ] 입력 포맷
   - [ ] validate
     - [ ] 아이디 길이 제한 / user 길이 제한
     - [ ] 사용자 아이디 알파멧 소문자 제한
     - [ ] 기타 시간 남으면 엄밀히 하기
   - [X] 양방향 맵 사용해서 (key-value) user-friend 쌍 구현
-  - [ ] key가 user인 맵에 대해 friend +10
-  - [ ] visitor에 대해 +1
-  - [ ] 위 두개도 맵에 저장(key - id / value - 점수)
+  - [X] key가 user인 맵에 대해 friend +10
+  - [X] visitor에 대해 +1
+  - [X] 위 두개도 맵에 저장(key - id / value - 점수)
+  - [X] user 가 아니고 user 친구가 아닌 한에서 상위 5개 (+ 0 점 제외) 추출
