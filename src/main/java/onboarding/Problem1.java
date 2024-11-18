@@ -6,8 +6,10 @@ import java.util.stream.Stream;
 
 class Problem1 {
     public static int solution(List<Integer> pobi, List<Integer> crong) {
-        int answer = Integer.MAX_VALUE;
-        return answer;
+        if(!validatePagesSequence(pobi) || !validatePagesSequence(crong) || !validatePagesOddAndEven(pobi) || !validatePagesOddAndEven(crong)) {
+            return -1;
+        }
+        return maxWho(pobi, crong);
     }
 
     static int sumOfPages(Integer pages) {
@@ -46,5 +48,27 @@ class Problem1 {
         }
 
         return max_who;
+    }
+
+    static boolean validatePagesSequence(List<Integer> who) {
+        if (who.get(0)+1 !=  who.get(1)) {
+            return false;
+        }
+        return true;
+    }
+
+    static boolean validatePagesOddAndEven(List<Integer> who) {
+        if (who.get(0) % 2 != 0 && who.get(1) % 2 == 0) {
+            return true;
+        }
+        return false;
+    }
+
+    // 안씀
+    static void printResult(List<Integer> pobi, List<Integer> crong, int result) {
+        System.out.println("| pobi | crong | result |\n"
+                + "| --- | --- | --- |");
+        System.out.println("| " +  pobi + " | " + crong + " | " + result + " |");
+
     }
 }
